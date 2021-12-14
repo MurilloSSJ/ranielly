@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+h2{
+    font-family: 'poppins',open-sans;
+    font-size: 1.9rem;
+}
+P{
+    font-family: 'poppins',sans-serif;
+    font-size: 1.2rem;
+}
+span{
+    color:#fb8500;
+}
+.headerContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+}
+.headerImage{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    background-image: url('../img/nos.jpeg');
+    background-position: center;
+}
+.headerContent{
+    color: #f8f8ff;
+    padding-left: 30px;
+}
+#AlterTextHeader{
+    color: #e9c46a;
+}
+#AlterTextHeader::after{
+    content: '|';
+    padding-left: 5px;
+    animation: pisc 0.5s alternate infinite;
+}
+@keyframes pisc{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.iconHeader{
+    font-size: 42px;
+    color: #f8f8ff;
+    align-self: center;
+    margin-top: 30px;
+    animation: pisc 0.8s alternate infinite;
+}
+.motivosContainer{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.motivosContainer p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: justify;
+    padding: 0px 30px;
+}
+.historiaContainer{
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.historiaContainer h2{
+    margin-bottom: 50px;
+}
+.casamento{
+    text-align: center;
+    margin-bottom: 100px;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+a{
+    position: relative;
+    text-decoration: none;
+    padding: 20px 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'poppins',sans-serif;
+    font-size: 1.3rem;
+    background: #121212;
+    margin: 40px;
+    transition: 1s;
+    overflow: hidden;
+}
+a:hover{
+    background: #22e622;
+    box-shadow: 0 0 10px #22e622,
+    0 0 30px #22e622,
+    0 0 60px #22e622,
+    0 0 100px #22e622;
+}
+a::before{
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 400%;
+    background: #22e622;
+    transition: 1s;
+    animation: animate 2s linear infinite;
+    animation-delay: calc(0.33s * var(--i));
+}
+a:hover::before{
+    width: 120%;
+}
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+a::after{
+    content: '';
+    position: absolute;
+    background-color: white;
+    inset: 4px;
+    transition: 0.5s;
+}
+a:hover::after{
+    background-color: #22e622;
+}
+a span{
+    position: relative;
+    z-index: 999;
+    font-size: 1em;
+    color: #121212;
+    letter-spacing: 2px;
+}
